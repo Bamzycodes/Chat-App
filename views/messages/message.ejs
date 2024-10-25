@@ -1,0 +1,15 @@
+<div class='md:min-w-[450px] flex flex-col'>  
+    <div class='px-4 flex-1'>  
+        <% messages.forEach(function(message) { %>  
+            <div class='chat'>  
+                <div class='chat-image avatar'>  
+                    <div class='w-10 rounded-full'>  
+                        <img alt='User Avatar' src=<%= message.senderId.equals(loggedInUser._id) ? loggedInUser.profilePic : selectedUser.profilePic %> />  
+                    </div>  
+                </div>  
+                <div class='chat-bubble text-white'><%= message.message %></div>  
+                <div class='chat-footer opacity-50 text-xs flex gap-1 items-center'><%= new Date(message.createdAt).toLocaleTimeString() %></div>  
+            </div>  
+        <% }); %>  
+    </div>  
+</div>  

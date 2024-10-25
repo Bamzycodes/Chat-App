@@ -1,0 +1,19 @@
+<% if (selectedUser) { %>  
+    <form class='px-4 my-3' action="/sendMessages/<%= selectedUser._id %>" method="POST">  
+        <div class='w-full relative'>  
+            <input  
+                type='text'  
+                name='message'  
+                class='border text-sm rounded-lg block w-full p-2.5 bg-gray-700 border-gray-600 text-white'  
+                placeholder='Send a message'  
+                required  
+            />  
+            <button type='submit' class='absolute inset-y-0 end-0 flex items-center pe-3 text-white'>  
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 12l16.5-9v18l-16.5-9z" />
+                </svg>
+            </button>  
+        </div>  
+    </form>  
+<% } %>  
+

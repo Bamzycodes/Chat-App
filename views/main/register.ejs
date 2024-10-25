@@ -1,0 +1,80 @@
+<div class='flex flex-col items-center justify-center min-w-96 mx-auto'>
+    <div class='w-full p-6 rounded-lg shadow-md bg-gray-400 bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-0'>
+        <h1 class='text-3xl font-semibold text-center text-gray-300'>
+            Sign Up <span class='text-blue-500'> ChatApp</span>
+        </h1>
+
+        <form action="/auth/signup" method="post">  
+            <div>  
+                <label class='label p-2'>  
+                    <span class='text-base label-text'>Full Name</span>  
+                </label>  
+                <input type='text' placeholder='John Doe' name="fullname" class='text-white w-full input input-bordered h-10' />  
+            </div>  
+
+            <div>  
+                <label class='label p-2'>  
+                    <span class='text-base label-text'>Username</span>  
+                </label>  
+                <input type='text' placeholder='johndoe' name="username" class=' text-white w-full input input-bordered h-10' />  
+            </div>  
+
+            <div>  
+                <label class='label'>  
+                    <span class='text-base label-text'>Password</span>  
+                </label>  
+                <input  
+                    type='password'  
+                    placeholder='******'  
+                    class='w-full input input-bordered h-10 text-white '  
+                    name="password"  
+                />  
+            </div>  
+
+            <div>
+                <label class='label'>
+                    <span class='text-base label-text'>Confirm Password</span>
+                </label>
+                <input
+                    type='password'
+                    placeholder='******'
+                    class='w-full input input-bordered h-10 text-white '
+                    name="confirmPassword"
+                />
+            </div>
+
+            <div class='flex'>
+                <div>
+                    <label class='label gap-2 cursor-pointer'>
+                        <span class='label-text text-white '>Male</span>
+                        <input
+                            type='radio'
+                            name='gender'
+                            value='male'
+                            class='radio border-slate-900'
+                        />
+                    </label>
+                </div>
+                <div>
+                    <label class='label gap-2 cursor-pointer'>
+                        <span class='label-text text-white '>Female</span>
+                        <input
+                            type='radio'
+                            name='gender'
+                            value='female'
+                            class='radio border-slate-900'
+                        />
+                    </label>
+                </div>
+            </div>
+        
+            <a class='text-sm text-white  hover:underline hover:text-blue-600 mt-2 inline-block' href='/login'>  
+                Already have an account?  
+            </a>  
+        
+            <div>  
+                <button class='btn btn-block btn-sm mt-2 border border-slate-700'>Sign Up</button>  
+            </div>  
+        </form>
+    </div>
+</div>
